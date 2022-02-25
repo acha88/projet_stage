@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+        <link rel="stylesheet" href="../css/style.css">
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
@@ -15,40 +17,61 @@
         {% endblock %}
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">LOGO</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            
-                <div class="collapse navbar-collapse" id="navbarColor03">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/site">Actualités</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/site/prestations">Prestations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/site/help">Assistance</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/site/ref">Références</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Un menu</a>
-                            <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Sous-menu 1</a>
-                            <a class="dropdown-item" href="#">Sous-menu 2</a>
-                            <a class="dropdown-item" href="#">Sous-menu 3</a>
-                        </li>
-                    </ul>
+        <!--début block header-->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">LOGO</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse" id="navbarColor03">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/site">Actualités</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/site/prestations">Prestations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/site/help">Assistance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/site/ref">Références</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Un menu</a>
+                                <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Sous-menu 1</a>
+                                <a class="dropdown-item" href="#">Sous-menu 2</a>
+                                <a class="dropdown-item" href="#">Sous-menu 3</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
+        <!--fin block header-->
+        <!--début block body-->
         <div class="main">
             {% block body %}{% endblock %}
         </div>
+        <!--fin block body-->
+        <!--début block footer-->
+        <footer class="bg-light">
+            <div class="contact">
+                <h5>Contact</h5>
+                <address> 42 rue Sergent Bobillot, 54000 NANCY</address>
+                <p>03 83 44 55 49</p>
+            </div>
+            <div class="hour">
+                <a href="https://www.google.fr/maps/place/Help+Info/@48.6876037,6.1579247,17z/data=!3m1!4b1!4m5!3m4!1s0x4794a29b749417df:0x5e4da2dbbe3cb892!8m2!3d48.6876037!4d6.1601134">Nos horaires</a>
+            </div>
+            <div>
+                <p>Retrouvez-nous sur <i class="fa-brands fa-facebook"><a href="https://www.facebook.com/Helpinfo-102862271180558/"></a></i></p>
+            </div>
+        </footer>
+        <!--fin block footer-->
     </body>
 </html>
