@@ -2,14 +2,59 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
-        <link rel="stylesheet" href="../css/style.css">
+        <title>{% block title %}Help Info{% endblock %}</title>
+        <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css"/>
+        
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
+            <style>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: 0;
+                }
+                #navId {
+                    position: fixed;
+                    z-index: 1;
+                    width: 100%;
+                }
+                .outWave {
+                    margin: 0 5%;
+                    text-align: justify;
+                }
+                footer {
+                    margin-top: -20px;
+                    display: flex;
+                    flex-direction: row;
+                    padding: 5%;
+                }
+                .contact {
+                    width: 35%;
+                }
+                .hour {
+                    width: 25%;
+                }
+                .reseauSocial {
+                    width: 25%;
+                }
+                /* ASSISTANCE */
+                .sectionAssistance {
+                    display: flex;
+                    flex-direction: row;
+                }
+                .cardAssistance {
+                    margin: 5%;
+                    width: 40%;
+                    text-align: center;
+                }
+                .btnAssistance {
+                    padding: 1%;
+                }
+                .aAssistance {
+                    text-decoration: none;
+                }
+            </style>
         {% endblock %}
 
         {% block javascripts %}
@@ -19,7 +64,7 @@
     <body>
         <!--début block header-->
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav id="navId" class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/">LOGO</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,23 +74,19 @@
                     <div class="collapse navbar-collapse" id="navbarColor03">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="/site">Actualités</a>
+                                <a class="nav-link" href="/#solution">La Solution</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/site/prestations">Prestations</a>
+                                <a class="nav-link" href="/#maintenance">Maintenance</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/site/help">Assistance</a>
+                                <a class="nav-link" href="/site">Assistance</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/site/ref">Références</a>
+                                <a class="nav-link" href="/site/ref">Formations</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Un menu</a>
-                                <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Sous-menu 1</a>
-                                <a class="dropdown-item" href="#">Sous-menu 2</a>
-                                <a class="dropdown-item" href="#">Sous-menu 3</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/site/ref">Démo</a>
                             </li>
                         </ul>
                     </div>
@@ -62,14 +103,20 @@
         <footer class="bg-light">
             <div class="contact">
                 <h5>Contact</h5>
-                <address> 42 rue Sergent Bobillot, 54000 NANCY</address>
-                <p>03 83 44 55 49</p>
+                <address> 42 rue Sergent Bobillot, <br> 54000 Nancy</address>
+                <iframe height="150px" width="150px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2633.9351935603177!2d6.157924715668326!3d48.68760367927109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4794a29b749417df%3A0x5e4da2dbbe3cb892!2sHelp%20Info!5e0!3m2!1sfr!2sfr!4v1645798779046!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="hour">
-                <a href="https://www.google.fr/maps/place/Help+Info/@48.6876037,6.1579247,17z/data=!3m1!4b1!4m5!3m4!1s0x4794a29b749417df:0x5e4da2dbbe3cb892!8m2!3d48.6876037!4d6.1601134">Nos horaires</a>
+                <p><svg height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M320 0H64C37.49 0 16 21.49 16 48v416C16 490.5 37.49 512 64 512h256c26.51 0 48-21.49 48-48v-416C368 21.49 346.5 0 320 0zM192 464c-17.75 0-32-14.25-32-32s14.25-32 32-32s32 14.25 32 32S209.8 464 192 464z"/></svg> : 03 83 44 55 49</p>
+                <a href="https://www.google.fr/maps/place/Help+Info/@48.6876037,6.1579247,17z/data=!3m1!4b1!4m5!3m4!1s0x4794a29b749417df:0x5e4da2dbbe3cb892!8m2!3d48.6876037!4d6.1601134" target="blank">Nos horaires</a>
+
             </div>
-            <div>
-                <p>Retrouvez-nous sur <i class="fa-brands fa-facebook"><a href="https://www.facebook.com/Helpinfo-102862271180558/"></a></i></p>
+            <div class="reseauSociaul">
+                <p>Retrouvez-nous sur  
+                    <a href="https://www.facebook.com/Helpinfo-102862271180558/" target="blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="25px"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                    </a>
+                </p>
             </div>
         </footer>
         <!--fin block footer-->
