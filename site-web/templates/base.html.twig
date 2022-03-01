@@ -66,7 +66,7 @@
         <header>
             <nav id="navId" class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/">LOGO</a>
+                    <a class="navbar-brand" href="{{path('home')}}">LOGO</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -83,10 +83,10 @@
                                 <a class="nav-link" href="/site">Assistance</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/site/ref">Formations</a>
+                                <a class="nav-link" href="{{path('mooc')}}">Formations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/site/ref">Démo</a>
+                                <a class="nav-link" href="{{path('demo')}}">Démo</a>
                             </li>
                         </ul>
                     </div>

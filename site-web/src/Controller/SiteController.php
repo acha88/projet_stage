@@ -11,8 +11,7 @@ class SiteController extends AbstractController
     /**
      * @Route("/site", name="site")
      */
-    public function index(): Response
-    {
+    public function index(): Response {
         return $this->render('site/index.html.twig', [
             'controller_name' => 'SiteController',
         ]);
@@ -24,5 +23,17 @@ class SiteController extends AbstractController
         return $this->render('site/home.html.twig', [
             'title' => "Help Info"
         ]);
+    }
+    /**
+    * @Route("/site/mooc", name="mooc")
+    */
+    public function mooc() {
+        return $this->render('site/mooc.html.twig');
+    }
+    /**
+    * @Route("/site/demo", name="demo") 
+    */
+    public function demo() {
+        return $this->render('site/demo.html.twig');
     }
 }
