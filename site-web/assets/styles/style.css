@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+}
+#logo {
+    height: 65px;
+    width: 65px;
+}
+#navId {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+.outWave {
+    margin: 0 5%;
+    text-align: justify;
+}
+footer {
+    margin-top: -20px;
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+}
+.contact {
+    width: 35%;
+}
+.hour {
+    width: 25%;
+}
+.reseauSocial {
+    width: 25%;
+}
+/* ASSISTANCE */
+.sectionAssistance {
+    display: flex;
+    flex-direction: row;
+}
+.cardAssistance {
+    margin: 5%;
+    width: 40%;
+    text-align: center;
+}
+.btnAssistance {
+    padding: 1%;
+}
+.aAssistance {
+    text-decoration: none;
+}
