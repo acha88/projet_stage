@@ -1,150 +1,76 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-     
+    <!--Partie formation avec questionnaire de réussite puis envoie d'un mail d'encouragement et un badge--> 
     <div class="inWave">
         <!--vague du header, plusieurs vagues-->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 270">
-            <path fill="#f0f5fa" fill-opacity="1" d="M0,224L34.3,202.7C68.6,181,137,139,206,144C274.3,149,343,203,411,197.3C480,192,549,128,617,133.3C685.7,139,754,213,823,245.3C891.4,277,960,267,1029,229.3C1097.1,192,1166,128,1234,122.7C1302.9,117,1371,171,1406,197.3L1440,224L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
-        </svg>
+        <img class="wave" src="{{asset('images/wave2.svg')}}" alt="">
     </div>
     <div class="outWave">
         <!--premier paragraphe, pouvant servir à une présentation-->
-        <h3>Bienvenue sur votre espace de formation !</h3>
+        <h3><span>Découvrir Get-MS</span></h3>
         <hr>
-        <h5>Cours n°1 : ......</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, fugiat! Recusandae, quam. Pariatur, saepe culpa architecto molestiae minus voluptate natus exercitationem delectus ducimus laudantium, consequuntur quisquam nemo reiciendis, suscipit quod sequi velit expedita illum labore reprehenderit corporis error ad accusantium nisi? Culpa magni ut impedit beatae libero deserunt, necessitatibus deleniti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus impedit nostrum reiciendis doloremque harum sapiente, aspernatur sit consequatur voluptate nam adipisci deserunt nemo, iusto asperiores animi hic rem voluptates praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint doloribus dolore fuga, aut veritatis dolor perspiciatis illum quidem? Mollitia, corporis. Ea aliquam blanditiis et repudiandae quae laborum. Quam, eius! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis libero delectus expedita provident modi maiores. Labore hic sed est ea eligendi, doloremque distinctio suscipit, nulla cum ex quas neque perferendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas voluptatum porro reiciendis iure error. Quidem enim eligendi, velit ea voluptas laborum sapiente, error corporis numquam dolores, dolore facere suscipit odio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi fugit recusandae ipsa voluptas quaerat natus blanditiis incidunt, rem ipsum molestiae odit dolor earum non vero, nostrum, dolore inventore? Molestiae, blanditiis!</p>
+        <section class="SectionMoocRow">
+            <div class="moocCard">
+                    <img class="smallLogo" src="{{asset('images/logoHelpInfoArrondi.png')}}" alt="logo">
+                    <h2>Get-MS</h2>
+                    <p>Gestion des plannings</p>
+            </div>
+            <div class="moocCard">
+                <h5>La formation :</h5>
+                <ul>
+                    <li>8 personnes maximum</li>
+                    <li>opérationelle</li>
+                </ul>
+            </div>
+        </section>
     </div>
-    <!--vague de séparation--> 
-    <div class="inWave">
-        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
-        </svg>
-    </div>
-    <div class="outWave">
+    <div class="moocInfo">
         <!--deuxième paragraphe, pouvant servir de début de la 2eme page sur la nav avec un bouton "Lire la suite, reportant sur la page concernée"-->
-        <h5>Cours n°2 : ......</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, fugiat! Recusandae, quam. Pariatur, saepe culpa architecto molestiae minus voluptate natus exercitationem delectus ducimus laudantium, consequuntur quisquam nemo reiciendis, suscipit quod sequi velit expedita illum labore reprehenderit corporis error ad accusantium nisi? Culpa magni ut impedit beatae libero deserunt, necessitatibus deleniti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus impedit nostrum reiciendis doloremque harum sapiente, aspernatur sit consequatur voluptate nam adipisci deserunt nemo, iusto asperiores animi hic rem voluptates praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint doloribus dolore fuga, aut veritatis dolor perspiciatis illum quidem? Mollitia, corporis. Ea aliquam blanditiis et repudiandae quae laborum. Quam, eius! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis libero delectus expedita provident modi maiores. Labore hic sed est ea eligendi, doloremque distinctio suscipit, nulla cum ex quas neque perferendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas voluptatum porro reiciendis iure error. Quidem enim eligendi, velit ea voluptas laborum sapiente, error corporis numquam dolores, dolore facere suscipit odio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi fugit recusandae ipsa voluptas quaerat natus blanditiis incidunt, rem ipsum molestiae odit dolor earum non vero, nostrum, dolore inventore? Molestiae, blanditiis!</p>
+        <h5>Prérequis :</h5>
+        <ul>
+            <li>Etre familiarisé avec le droit social et la convention collective dans le cadre du temps de travail.</li>
+        </ul>
+        <hr class="hrMooc">
+        <h5>Objectif :</h5>
+        <ul>
+            <li>Utiliser le logiciel Get-MS au regard du droit social, de votre convention collective, de vos usages.</li>
+        </ul>
+        <hr class="hrMooc">
+        <h5>Durée :</h5>
+        <ul>
+            <li>1 jour soit 7 heures</li>
+        </ul>
     </div>
-     <!--vague de séparation-->
-     <div class="inWave">
-        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
-        </svg>
+    <div class="mooc">
+        <h5>Profil du formateur :</h5>
+            <p>Formateur expert, il est pédagogue et certifier dans son domaine.</p>
+            <h5>Méthode pédagogique :</h5>
+            <p>La formation est constituée d'apports théorique et d'exercices expertises.</p>
+            <p>Chaque stagiaire possède un poste de travail.</p>
+            <h5>Suivi pédagogique :</h5>
+            <p>Un suivi de la formation est rédigé par une feuille de présence émargée par demie journée par les stagiaires et du formateur. Un questionnaire de satisfaction et une validation des acquis seront complétées par chaque stagiaire en fin de formation.</p>
     </div>
-    <div class="outWave">
-        <!--deuxième paragraphe, pouvant servir de début de la 2eme page sur la nav avec un bouton "Lire la suite, reportant sur la page concernée"-->
-        <h5>Cours n°3 : ......</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, fugiat! Recusandae, quam. Pariatur, saepe culpa architecto molestiae minus voluptate natus exercitationem delectus ducimus laudantium, consequuntur quisquam nemo reiciendis, suscipit quod sequi velit expedita illum labore reprehenderit corporis error ad accusantium nisi? Culpa magni ut impedit beatae libero deserunt, necessitatibus deleniti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus impedit nostrum reiciendis doloremque harum sapiente, aspernatur sit consequatur voluptate nam adipisci deserunt nemo, iusto asperiores animi hic rem voluptates praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint doloribus dolore fuga, aut veritatis dolor perspiciatis illum quidem? Mollitia, corporis. Ea aliquam blanditiis et repudiandae quae laborum. Quam, eius! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis libero delectus expedita provident modi maiores. Labore hic sed est ea eligendi, doloremque distinctio suscipit, nulla cum ex quas neque perferendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas voluptatum porro reiciendis iure error. Quidem enim eligendi, velit ea voluptas laborum sapiente, error corporis numquam dolores, dolore facere suscipit odio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi fugit recusandae ipsa voluptas quaerat natus blanditiis incidunt, rem ipsum molestiae odit dolor earum non vero, nostrum, dolore inventore? Molestiae, blanditiis!</p>
-    </div>
-     <!--vague de séparation-->
-     <div class="inWave">
-        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
-        </svg>
-    </div>
-    <div class="outWave">
-        <!--deuxième paragraphe, pouvant servir de début de la 2eme page sur la nav avec un bouton "Lire la suite, reportant sur la page concernée"-->
-        <h5>Cours n°4 : ......</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, fugiat! Recusandae, quam. Pariatur, saepe culpa architecto molestiae minus voluptate natus exercitationem delectus ducimus laudantium, consequuntur quisquam nemo reiciendis, suscipit quod sequi velit expedita illum labore reprehenderit corporis error ad accusantium nisi? Culpa magni ut impedit beatae libero deserunt, necessitatibus deleniti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus impedit nostrum reiciendis doloremque harum sapiente, aspernatur sit consequatur voluptate nam adipisci deserunt nemo, iusto asperiores animi hic rem voluptates praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint doloribus dolore fuga, aut veritatis dolor perspiciatis illum quidem? Mollitia, corporis. Ea aliquam blanditiis et repudiandae quae laborum. Quam, eius! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis libero delectus expedita provident modi maiores. Labore hic sed est ea eligendi, doloremque distinctio suscipit, nulla cum ex quas neque perferendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas voluptatum porro reiciendis iure error. Quidem enim eligendi, velit ea voluptas laborum sapiente, error corporis numquam dolores, dolore facere suscipit odio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi fugit recusandae ipsa voluptas quaerat natus blanditiis incidunt, rem ipsum molestiae odit dolor earum non vero, nostrum, dolore inventore? Molestiae, blanditiis!</p>
-    </div>
-     <!--vague de séparation-->
-     <div class="inWave">
-        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
-        </svg>
-    </div>
-    <div class="outWave">
-        <!--deuxième paragraphe, pouvant servir de début de la 2eme page sur la nav avec un bouton "Lire la suite, reportant sur la page concernée"-->
-        <h5>Cours n°5 : ......</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, fugiat! Recusandae, quam. Pariatur, saepe culpa architecto molestiae minus voluptate natus exercitationem delectus ducimus laudantium, consequuntur quisquam nemo reiciendis, suscipit quod sequi velit expedita illum labore reprehenderit corporis error ad accusantium nisi? Culpa magni ut impedit beatae libero deserunt, necessitatibus deleniti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus impedit nostrum reiciendis doloremque harum sapiente, aspernatur sit consequatur voluptate nam adipisci deserunt nemo, iusto asperiores animi hic rem voluptates praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint doloribus dolore fuga, aut veritatis dolor perspiciatis illum quidem? Mollitia, corporis. Ea aliquam blanditiis et repudiandae quae laborum. Quam, eius! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis libero delectus expedita provident modi maiores. Labore hic sed est ea eligendi, doloremque distinctio suscipit, nulla cum ex quas neque perferendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas voluptatum porro reiciendis iure error. Quidem enim eligendi, velit ea voluptas laborum sapiente, error corporis numquam dolores, dolore facere suscipit odio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi fugit recusandae ipsa voluptas quaerat natus blanditiis incidunt, rem ipsum molestiae odit dolor earum non vero, nostrum, dolore inventore? Molestiae, blanditiis!</p>
-    </div>
-     <!--vague de séparation-->
-     <div class="inWave">
-        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
-        </svg>
-    </div>
-    <div class="outWave">
-        <!--deuxième paragraphe, pouvant servir de début de la 2eme page sur la nav avec un bouton "Lire la suite, reportant sur la page concernée"-->
-        <h5>Cours n°6 : ......</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, fugiat! Recusandae, quam. Pariatur, saepe culpa architecto molestiae minus voluptate natus exercitationem delectus ducimus laudantium, consequuntur quisquam nemo reiciendis, suscipit quod sequi velit expedita illum labore reprehenderit corporis error ad accusantium nisi? Culpa magni ut impedit beatae libero deserunt, necessitatibus deleniti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus impedit nostrum reiciendis doloremque harum sapiente, aspernatur sit consequatur voluptate nam adipisci deserunt nemo, iusto asperiores animi hic rem voluptates praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint doloribus dolore fuga, aut veritatis dolor perspiciatis illum quidem? Mollitia, corporis. Ea aliquam blanditiis et repudiandae quae laborum. Quam, eius! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis libero delectus expedita provident modi maiores. Labore hic sed est ea eligendi, doloremque distinctio suscipit, nulla cum ex quas neque perferendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas voluptatum porro reiciendis iure error. Quidem enim eligendi, velit ea voluptas laborum sapiente, error corporis numquam dolores, dolore facere suscipit odio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi fugit recusandae ipsa voluptas quaerat natus blanditiis incidunt, rem ipsum molestiae odit dolor earum non vero, nostrum, dolore inventore? Molestiae, blanditiis!</p>
-    </div>
-     <!--vague de séparation-->
-     <div class="inWave">
-        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
-        </svg>
-    </div>
-    <div class="outWave">
-        <!--deuxième paragraphe, pouvant servir de début de la 2eme page sur la nav avec un bouton "Lire la suite, reportant sur la page concernée"-->
-        <h5>Cours n°7 : ......</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, fugiat! Recusandae, quam. Pariatur, saepe culpa architecto molestiae minus voluptate natus exercitationem delectus ducimus laudantium, consequuntur quisquam nemo reiciendis, suscipit quod sequi velit expedita illum labore reprehenderit corporis error ad accusantium nisi? Culpa magni ut impedit beatae libero deserunt, necessitatibus deleniti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus impedit nostrum reiciendis doloremque harum sapiente, aspernatur sit consequatur voluptate nam adipisci deserunt nemo, iusto asperiores animi hic rem voluptates praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint doloribus dolore fuga, aut veritatis dolor perspiciatis illum quidem? Mollitia, corporis. Ea aliquam blanditiis et repudiandae quae laborum. Quam, eius! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis libero delectus expedita provident modi maiores. Labore hic sed est ea eligendi, doloremque distinctio suscipit, nulla cum ex quas neque perferendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas voluptatum porro reiciendis iure error. Quidem enim eligendi, velit ea voluptas laborum sapiente, error corporis numquam dolores, dolore facere suscipit odio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi fugit recusandae ipsa voluptas quaerat natus blanditiis incidunt, rem ipsum molestiae odit dolor earum non vero, nostrum, dolore inventore? Molestiae, blanditiis!</p>
-    </div>
-     <!--vague de séparation-->
-     <div class="inWave">
-        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
-        </svg>
-    </div>
-    <div class="outWave">
-        <!--deuxième paragraphe, pouvant servir de début de la 2eme page sur la nav avec un bouton "Lire la suite, reportant sur la page concernée"-->
-        <h5>Cours n°8 : ......</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, fugiat! Recusandae, quam. Pariatur, saepe culpa architecto molestiae minus voluptate natus exercitationem delectus ducimus laudantium, consequuntur quisquam nemo reiciendis, suscipit quod sequi velit expedita illum labore reprehenderit corporis error ad accusantium nisi? Culpa magni ut impedit beatae libero deserunt, necessitatibus deleniti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus impedit nostrum reiciendis doloremque harum sapiente, aspernatur sit consequatur voluptate nam adipisci deserunt nemo, iusto asperiores animi hic rem voluptates praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint doloribus dolore fuga, aut veritatis dolor perspiciatis illum quidem? Mollitia, corporis. Ea aliquam blanditiis et repudiandae quae laborum. Quam, eius! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis libero delectus expedita provident modi maiores. Labore hic sed est ea eligendi, doloremque distinctio suscipit, nulla cum ex quas neque perferendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas voluptatum porro reiciendis iure error. Quidem enim eligendi, velit ea voluptas laborum sapiente, error corporis numquam dolores, dolore facere suscipit odio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi fugit recusandae ipsa voluptas quaerat natus blanditiis incidunt, rem ipsum molestiae odit dolor earum non vero, nostrum, dolore inventore? Molestiae, blanditiis!</p>
-    </div>
-     <!--vague de séparation-->
-     <div class="inWave">
-        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
-        </svg>
-    </div>
-    <div class="outWave">
-        <!--deuxième paragraphe, pouvant servir de début de la 2eme page sur la nav avec un bouton "Lire la suite, reportant sur la page concernée"-->
-        <h5>Cours n°9 : ......</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, fugiat! Recusandae, quam. Pariatur, saepe culpa architecto molestiae minus voluptate natus exercitationem delectus ducimus laudantium, consequuntur quisquam nemo reiciendis, suscipit quod sequi velit expedita illum labore reprehenderit corporis error ad accusantium nisi? Culpa magni ut impedit beatae libero deserunt, necessitatibus deleniti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus impedit nostrum reiciendis doloremque harum sapiente, aspernatur sit consequatur voluptate nam adipisci deserunt nemo, iusto asperiores animi hic rem voluptates praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint doloribus dolore fuga, aut veritatis dolor perspiciatis illum quidem? Mollitia, corporis. Ea aliquam blanditiis et repudiandae quae laborum. Quam, eius! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis libero delectus expedita provident modi maiores. Labore hic sed est ea eligendi, doloremque distinctio suscipit, nulla cum ex quas neque perferendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas voluptatum porro reiciendis iure error. Quidem enim eligendi, velit ea voluptas laborum sapiente, error corporis numquam dolores, dolore facere suscipit odio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi fugit recusandae ipsa voluptas quaerat natus blanditiis incidunt, rem ipsum molestiae odit dolor earum non vero, nostrum, dolore inventore? Molestiae, blanditiis!</p>
-    </div>
-     <!--vague de séparation-->
-     <div class="inWave">
-        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
-            <path fill="#f0f5fa" fill-opacity="0.95" d="M0,96L34.3,90.7C68.6,85,137,75,206,64C274.3,53,343,43,411,58.7C480,75,549,117,617,154.7C685.7,192,754,224,823,224C891.4,224,960,192,1029,170.7C1097.1,149,1166,139,1234,144C1302.9,149,1371,171,1406,181.3L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
-        </svg>
-    </div>
-    <div class="outWave">
-        <!--deuxième paragraphe, pouvant servir de début de la 2eme page sur la nav avec un bouton "Lire la suite, reportant sur la page concernée"-->
-        <h5>Cours n°10 : ......</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, fugiat! Recusandae, quam. Pariatur, saepe culpa architecto molestiae minus voluptate natus exercitationem delectus ducimus laudantium, consequuntur quisquam nemo reiciendis, suscipit quod sequi velit expedita illum labore reprehenderit corporis error ad accusantium nisi? Culpa magni ut impedit beatae libero deserunt, necessitatibus deleniti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus impedit nostrum reiciendis doloremque harum sapiente, aspernatur sit consequatur voluptate nam adipisci deserunt nemo, iusto asperiores animi hic rem voluptates praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint doloribus dolore fuga, aut veritatis dolor perspiciatis illum quidem? Mollitia, corporis. Ea aliquam blanditiis et repudiandae quae laborum. Quam, eius! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis libero delectus expedita provident modi maiores. Labore hic sed est ea eligendi, doloremque distinctio suscipit, nulla cum ex quas neque perferendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas voluptatum porro reiciendis iure error. Quidem enim eligendi, velit ea voluptas laborum sapiente, error corporis numquam dolores, dolore facere suscipit odio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi fugit recusandae ipsa voluptas quaerat natus blanditiis incidunt, rem ipsum molestiae odit dolor earum non vero, nostrum, dolore inventore? Molestiae, blanditiis!</p>
+    <div class="moocPlan">
+        <h4 class="hPlan">Plan du cours</h4>
+        <ul>
+            <li>PRINCIPES ET PRESENTATION</li>
+            <li>RAPPEL DROIT SOCIAL</li>
+            <li>PLANIFIER :</li>
+                <ol>- Horaire Type et Matrice</ol>
+                <ol>- Attribuer un roulement</ol>
+                <ol>- Interprétation des compteurs</ol>
+            <br>
+            <li>GESTION AU QUOTIDIEN : </li>
+                <ol>- Journée Nationale de la Santé</ol>
+                <ol>- Repas</ol>
+                <ol>- Heures supp</ol>
+                <ol>- Congés, RTT, CESS</ol>
+                <ol>- Repos compensateur</ol>
+        </ul>
     </div>
     <!--vague du footer-->
     <div class="inWave">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#f0f5fa" fill-opacity="1" d="M0,224L34.3,202.7C68.6,181,137,139,206,144C274.3,149,343,203,411,197.3C480,192,549,128,617,133.3C685.7,139,754,213,823,245.3C891.4,277,960,267,1029,229.3C1097.1,192,1166,128,1234,122.7C1302.9,117,1371,171,1406,197.3L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-        </svg> 
+        <img class="wave" src="{{asset('images/wave.svg')}}" alt="">
     </div>
 {% endblock body %}

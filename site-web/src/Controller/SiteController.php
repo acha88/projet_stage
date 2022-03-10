@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\ArticleRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Article;
 
 class SiteController extends AbstractController
 {
@@ -19,9 +21,11 @@ class SiteController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function home() {
+    public function home(ArticleRepository $repo) {
+        $article = $repo->findAll();
         return $this->render('site/home.html.twig', [
-            'title' => "Help Info"
+            'title' => "Help Info",
+            'article' => $article
         ]);
     }
     /**
