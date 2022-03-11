@@ -21,9 +21,18 @@ class SiteController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function home(ArticleRepository $repo) {
-        $article = $repo->findAll();
+    public function home() {
         return $this->render('site/home.html.twig', [
+            'title' => "Help Info",
+        ]);
+    }
+
+    /**
+     * @Route("/site/appli", name="appli")
+     */
+    public function appli(ArticleRepository $repo) {
+        $article = $repo->findAll();
+        return $this->render('site/appli.html.twig', [
             'title' => "Help Info",
             'article' => $article
         ]);

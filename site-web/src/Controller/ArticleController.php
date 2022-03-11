@@ -14,9 +14,9 @@ class ArticleController extends AbstractController
     {
         for($i = 1; $i <= 10; $i++) {
             $article = new Article();
-            $article->setTitleArticle("Titre de l'article n°$i")
+            $article->setTitleArticle("<h2>Titre de l'article n°$i</h2>")
                     ->setImage("https://via.placeholder.com/300x150")
-                    ->setContenu("<p>Contenu de l'article n°$i</p>");
+                    ->setContenu("<div>Contenu de l'article n°$i</div>");
 
             $manager->persist($article);
         }

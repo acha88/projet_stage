@@ -3,44 +3,22 @@
 {% block body %}
     <div class="inWave">
         <!--vague du header, plusieurs vagues-->
-        <img class="wave" src="{{asset('images/wave2.svg')}}" alt="">
+        <img class="wave" src="{{asset('images/wave1.2.svg')}}" alt="">
     </div>
-    <div class="outWave">
+    <section class="outWave">
         <br>
-        <!--articles des solutions en BDD-->
-        <h3 id="solution">Solutions GET-MS</h3>
-        <hr>
-        <section class="articles">
-            {% for article in article %}
-                <article>
-                    <h4>{{ article.titlearticle }}</h4>
-                    <div class="metadata">
-                        <img class="imgArticle" src="{{ article.image }}" alt="image">
-                        <div class="contentArticle">{{ article.contenu }}</div>
-                    </div>
-                </article>
-            {% endfor %}
-        </section>
-    </div>
-    <!--vague de séparation-->
-    <div class="inWave">
-        <img class="waveSeparate" src="{{asset('images/wave.svg')}}" alt="">
-        <img class="waveSeparate" src="{{asset('images/wave2.svg')}}" alt="">
-    </div>
-    <div class="outWave">
-        <br>
-        <!--deuxième paragraphe, pouvant servir de début de la 2eme page sur la nav avec un bouton "Lire la suite, reportant sur la page concernée"-->
-        <h3 id="maintenance">Maintenance et <a href="/site">Assistance</a></h3>
+        <!--Paragraphe de présentation du site web-->
+        {# <h3 id="maintenance">Maintenance et <a href="/site">Assistance</a></h3> #}
         <div class="content">
-            <p>La plupart des petites structures ne peuvent disposer d'un administrateur capable de maintenir les serveurs, d'effectuer les mises à jour des systèmes et des applications, de modifier les droits d'accès ou tout simplement assister les opérateurs dans l'utilisation quotidienne de l'outil informatique. Pour cela, nous avons mis en place une télémaintenance comprenant : </p>
+            <p><span> Help Info</span> a été créer en 1996 avec la volonté d'offrir aux PME/PMI des services personnalisés basés sur<span>la disponibilité, la compétence et la confiance.</span> En 25ans, la société s'est orientée vers deux pôles :</p>
             <ul class="ulAssist">
                 <div class="divRow">
                     <img class="imgAssist" src="{{ asset('images/assistance2-0.jpg') }}" alt="">
-                    <li class="liAssist">Une <span>maintenance préventive mensuelle</span> de votre serveur, en particulier pour vérifier les sauvegardes, l'antivirus, les disques etc</li>
+                    <li class="liAssist">L'installation et la <span>maintenance informatique,</span> le suivi du parc, la gestion de l'infrastructure réseau et la relation avec vos éditeurs de logiciels.<button class="btnMooc btn"> <a class="aMooc" href="/#maintenance">En savoir plus</a></button></li>
                 </div>
                 <div class="divRow">
-                    <img class="imgAssist" src="{{ asset('images/assistance3-1.jpg') }}" alt="">
-                    <li class="liAssist">Une <span>maintenance curative</span> en cas d'incident logiciel et matériel. La maintenance à partir de votre appel téléphonique ou sur rendez-vous selon votre besoin.</li>
+                    <li class="liAssist">L'Edition d'un <span>logiciel de gestion du temps de travail, </span> temps de présence, temps d'absence, GET-MS <button class="btnMooc btn"> <a class="aMooc" href="{{path('appli')}}">En savoir plus</a></button></li>
+                    <img class="imgAssist" src="{{ asset('images/assistance3-1.jpg') }}" alt="">  
                 </div>
                 <div class="divRow">
                     <img class="imgAssist" src="{{ asset('images/assistance1-1.jpg') }}" alt="">
@@ -48,9 +26,36 @@
                 </div>
             </ul>
         </div>
-    </div>
+    </section>
+    <section id="maintenance">
+        <div class="content">
+            <h3>Maintenance</h3>
+            <p>La plupart des petites structures ne peuvent disposer d'un administrateur capable de maintenir les serveurs, d'effectuer les mises à jour des systèmes et des applications, de modifier les droits d'accès ou tout simplement assister les opérateurs dans l'utilisation quotidienne de l'outil informatique. Pour cela, nous avons mis en place une télémaintenance comprenant :</p>
+            <ul class="ulAssist">
+                <div class="divRow">
+                    <img class="imgAssist" src="{{ asset('images/assistance2-0.jpg') }}" alt="">
+                    <li class="liAssist">Une <span>maintenance préventive mensuelle</span> de votre serveur, en particulier pour vérifier les sauvegardes, l’antivirus, les disques, …</li>
+                </div>
+                <div class="divRow">
+                    <li class="liAssist">Une <span>maintenance curative</span> en cas d’incident logiciel et matériel. La maintenance curative intervient à votre demande, immédiatement à partir de votre appel téléphonique ou sur rendez-vous selon votre besoin.</li>
+                    <img class="imgAssist" src="{{ asset('images/assistance3-1.jpg') }}" alt="">  
+                </div>
+                <div class="divRow">
+                    <img class="imgAssist" src="{{ asset('images/assistance1-1.jpg') }}" alt="">
+                    <li class="liAssist"><span>L'assistance avec prise en mains à distance</span> aux ordinateurs de bureau est un complément de la maintenance serveur. Elle permet aux utilisateurs de solliciter par téléphone la maintenance pour résoudre les dysfonctionnements du poste.</li>
+                </div>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h3>Assistance</h3>
+    </section>
+    <section>
+        <h3>Nos prestataires</h3>
+
+    </section>
     <!--vague du footer-->
     <div class="inWave">
-        <img class="wave" src="{{asset('images/wave.svg')}}" alt="">
+        <img class="wave" src="{{asset('images/wave2.1.svg')}}" alt="">
     </div>
 {% endblock body %}
