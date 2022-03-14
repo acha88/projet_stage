@@ -10,11 +10,11 @@
         <!--Paragraphe de présentation du site web-->
         {# <h3 id="maintenance">Maintenance et <a href="/site">Assistance</a></h3> #}
         <div class="content">
-            <p><span> Help Info</span> a été créer en 1996 avec la volonté d'offrir aux PME/PMI des services personnalisés basés sur<span>la disponibilité, la compétence et la confiance.</span> En 25ans, la société s'est orientée vers deux pôles :</p>
+            <p><span> Help Info</span> a été créer en 1996 avec la volonté d'offrir aux PME/PMI des services personnalisés basés sur<span> la disponibilité, la compétence et la confiance.</span> En 25ans, la société s'est orientée vers deux pôles :</p>
             <ul class="ulAssist">
                 <div class="divRow">
                     <img class="imgAssist" src="{{ asset('images/assistance2-0.jpg') }}" alt="">
-                    <li class="liAssist">L'installation et la <span>maintenance informatique,</span> le suivi du parc, la gestion de l'infrastructure réseau et la relation avec vos éditeurs de logiciels.<button class="btnMooc btn"> <a class="aMooc" href="/#maintenance">En savoir plus</a></button></li>
+                    <li class="liAssist">L'installation et la <span>maintenance informatique,</span> le suivi du parc, la gestion de l'infrastructure réseau et la relation avec vos éditeurs de logiciels. <button class="btnMooc btn"> <a class="aMooc" href="/#maintenance">En savoir plus</a></button></li>
                 </div>
                 <div class="divRow">
                     <li class="liAssist">L'Edition d'un <span>logiciel de gestion du temps de travail, </span> temps de présence, temps d'absence, GET-MS <button class="btnMooc btn"> <a class="aMooc" href="{{path('appli')}}">En savoir plus</a></button></li>
@@ -28,6 +28,7 @@
         </div>
     </section>
     <section id="maintenance">
+        <hr class="hrArticle">
         <div class="content">
             <h3>Maintenance</h3>
             <p>La plupart des petites structures ne peuvent disposer d'un administrateur capable de maintenir les serveurs, d'effectuer les mises à jour des systèmes et des applications, de modifier les droits d'accès ou tout simplement assister les opérateurs dans l'utilisation quotidienne de l'outil informatique. Pour cela, nous avons mis en place une télémaintenance comprenant :</p>
@@ -40,6 +41,14 @@
                     <li class="liAssist">Une <span>maintenance curative</span> en cas d’incident logiciel et matériel. La maintenance curative intervient à votre demande, immédiatement à partir de votre appel téléphonique ou sur rendez-vous selon votre besoin.</li>
                     <img class="imgAssist" src="{{ asset('images/assistance3-1.jpg') }}" alt="">  
                 </div>
+            </ul>
+        </div>
+    </section>
+    <section class="sectionAssistance">
+        <hr class="hrArticle">
+        <div class="content">
+            <h3><a href="/site"><span id="spanAssist">Assistance</span></a></h3>
+            <ul>
                 <div class="divRow">
                     <img class="imgAssist" src="{{ asset('images/assistance1-1.jpg') }}" alt="">
                     <li class="liAssist"><span>L'assistance avec prise en mains à distance</span> aux ordinateurs de bureau est un complément de la maintenance serveur. Elle permet aux utilisateurs de solliciter par téléphone la maintenance pour résoudre les dysfonctionnements du poste.</li>
@@ -48,11 +57,35 @@
         </div>
     </section>
     <section>
-        <h3>Assistance</h3>
-    </section>
-    <section>
-        <h3>Nos prestataires</h3>
-
+        <hr class="hrArticle">
+        <h3>Il nous ont fait confiance</h3>
+        <div class="divClient">
+            <div class="cardClient">
+                <h6 class="nameClient">ADAPEI88</h6>
+                <img class="imgClient" src="{{asset('images/clients/adapei88.jpg')}}" alt="adapai88">
+            </div>
+            {# <img class="imgClient" src="{{asset('images/clients/aeim54.jpg')}}" alt="aeim54"> #}
+            <div class="cardClient">
+                <h6 class="nameClient">CMSEA</h6>
+                <img class="imgClient" src="{{asset('images/clients/cmsea.jpg')}}" alt="cmsea">
+            </div>
+            <div class="cardClient">
+                <h6 class="nameClient">ENVIE</h6>
+                <img class="imgClient" src="{{asset('images/clients/envie.jpg')}}" alt="envie">
+            </div>
+            <div class="cardClient">
+                <h6 class="nameClient">IMMORAVI</h6>
+                <img class="imgClient" src="{{asset('images/clients/immoravi.jpg')}}" alt="immoravi">
+            </div>
+            <div class="cardClient">
+                <h6 class="nameClient">LES PAPILLONS BLANCS</h6>
+                <img class="imgClient" src="{{asset('images/clients/pbesl.jpg')}}" alt="pbsel">
+            </div>
+            <div class="cardClient">
+                <h6 class="nameClient">YSOS</h6>
+                <img class="imgClient" src="{{asset('images/clients/ysos.jpg')}}" alt="ysos">
+            </div>   
+        </div>
     </section>
     <!--vague du footer-->
     <div class="inWave">

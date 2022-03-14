@@ -13,11 +13,15 @@
         <section class="articles">
             {% for article in article %}
                 <article>
-                    <h4>{{ article.titlearticle }}</h4>
-                    <div class="metadata">
+                    <div class="divRow">
                         <img class="imgArticle" src="{{ article.image }}" alt="image">
-                        <div class="contentArticle">{{ article.contenu }}</div>
+                        <div class="metadata">
+                            <h4>{{ article.titlearticle }}</h4>
+                            <div class="contentArticle">{{ article.contenu | raw }}</div>
+                        </div>
                     </div>
+                    <br>
+                    <hr class="hrArticle">
                 </article>
             {% endfor %}
         </section>
