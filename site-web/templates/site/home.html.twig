@@ -1,37 +1,43 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <div class="inWave">
-        <!--vague du header, plusieurs vagues-->
-        <img class="wave" src="{{asset('images/wave1.2.svg')}}" alt="">
-    </div>
-    <section class="outWave">
+    <section id="getMS-MS" class="outWave">
         <br>
         <!--Paragraphe de présentation du site web-->
-        {# <h3 id="maintenance">Maintenance et <a href="/site">Assistance</a></h3> #}
+        <!--partie info logiciel-->
         <div class="content">
-            <p><span> Help Info</span> a été créer en 1996 avec la volonté d'offrir aux PME/PMI des services personnalisés basés sur<span> la disponibilité, la compétence et la confiance.</span> En 25ans, la société s'est orientée vers deux pôles :</p>
+            <p class="paraMaintenance">Forte de 22ans d'expérience dans le domaine de la gestion du temps de travail, <span> Help Info</span> avance avec la volonté d'offrir un logiciel parmi les plus complet du marché, personnalisable selon vos besoins, ainsi qu'un accompagnement durable basé sur<span> la disponibilité, la compétence et la confiance.</span></p>
+            <hr class="hrArticle">
+            <section class="sectionGrosTitre">
+                <div class="grosTitre">
+                    <h1>Un logiciel de gestion de temps de travail complet, qui s'adapte à vos besoins</h1>
+                    <p class="paraMaintenance">Créé par la collaboration entre des profesionnels du médico-social et du développement informatique, GET-MS est une solution qui correspond aux besoins réels des établissements car il est pensé PAR et POUR les utilisateurs.</p>
+                </div>
+                <div>
+                    <img class="imgGrosTitre" src="{{asset('images/collab.jpg')}}" alt="">
+                </div>
+            </section>
+            <hr class="hrArticle">
+            <h2>GET-MS, La Solution de gestion de temps de travail.</h2>
+            <h6 class="paraMaintenance">Terminé les fichiers Excel ; des centaines d'entreprises utilisent déjà GET-MS au quotidien pour gérer les agents, les plannings, les congés et les différents compteurs de leur établissements.</h6>
             <ul class="ulAssist">
                 <div class="divRow">
-                    <img class="imgAssist" src="{{ asset('images/assistance2-0.jpg') }}" alt="">
-                    <li class="liAssist">L'installation et la <span>maintenance informatique,</span> le suivi du parc, la gestion de l'infrastructure réseau et la relation avec vos éditeurs de logiciels. <button class="btnMooc btn"> <a class="aMooc" href="/#maintenance">En savoir plus</a></button></li>
+                    <img class="imgAssist" src="{{ asset('images/imgun.png') }}" alt="">
+                    <li class="liAssist"><span>Un suivi clair et rapide</span> Grâce aux outils de suivi, vous pouvez afficher les plannings journaliers, hebdomadaires ou mensuels. D'un coup d'oeil, vous savez qui sont les agents présents.<button class="btnMooc btn"> <a class="aMooc" href="{{path('appli')}}">En savoir plus</a></button></li>
                 </div>
                 <div class="divRow">
-                    <li class="liAssist">L'Edition d'un <span>logiciel de gestion du temps de travail, </span> temps de présence, temps d'absence, GET-MS <button class="btnMooc btn"> <a class="aMooc" href="{{path('appli')}}">En savoir plus</a></button></li>
-                    <img class="imgAssist" src="{{ asset('images/assistance3-1.jpg') }}" alt="">  
-                </div>
-                <div class="divRow">
-                    <img class="imgAssist" src="{{ asset('images/assistance1-1.jpg') }}" alt="">
-                    <li class="liAssist"><span>L'assistance avec prise en mains à distance</span> aux ordinateurs de bureau est un complément de la maintenance serveur. Elle permet aux utilisateurs de solliciter par téléphone la maintenance pour résoudre les dysfonctionnements du poste.</li>
+                    <li class="liAssist"><span>Un gain de temps au quotidien :</span> GET-MS permet de façon automatisé d'attribuer des roulements préparés en amont aux agents en deux clics, ce qui libère des tâches rébarbatives et évite les erreurs de saisies. <button class="btnMooc btn"> <a class="aMooc" href="{{path('appli')}}">En savoir plus</a></button></li>
+                    <img class="imgAssist" src="{{ asset('images/imgdeux.png') }}" alt="">  
                 </div>
             </ul>
         </div>
     </section>
+    <!--partie maintenance-->
     <section id="maintenance">
         <hr class="hrArticle">
         <div class="content">
             <h3>Maintenance</h3>
-            <p>La plupart des petites structures ne peuvent disposer d'un administrateur capable de maintenir les serveurs, d'effectuer les mises à jour des systèmes et des applications, de modifier les droits d'accès ou tout simplement assister les opérateurs dans l'utilisation quotidienne de l'outil informatique. Pour cela, nous avons mis en place une télémaintenance comprenant :</p>
+            <p class="paraMaintenance">La plupart des petites structures ne peuvent disposer d'un administrateur capable de maintenir les serveurs, d'effectuer les mises à jour des systèmes et des applications, de modifier les droits d'accès ou tout simplement assister les opérateurs dans l'utilisation quotidienne de l'outil informatique. Pour cela, nous avons mis en place une télémaintenance comprenant :</p>
             <ul class="ulAssist">
                 <div class="divRow">
                     <img class="imgAssist" src="{{ asset('images/assistance2-0.jpg') }}" alt="">
@@ -42,53 +48,45 @@
                     <img class="imgAssist" src="{{ asset('images/assistance3-1.jpg') }}" alt="">  
                 </div>
             </ul>
+            <br>
         </div>
     </section>
-    <section class="sectionAssistance">
+    <!--partie assistance-->
+    <section id="assistance" class="sectionAssistance">
         <hr class="hrArticle">
         <div class="content">
-            <h3><a href="/site"><span id="spanAssist">Assistance</span></a></h3>
+            <h3>Assistance</h3>
             <ul>
                 <div class="divRow">
                     <img class="imgAssist" src="{{ asset('images/assistance1-1.jpg') }}" alt="">
-                    <li class="liAssist"><span>L'assistance avec prise en mains à distance</span> aux ordinateurs de bureau est un complément de la maintenance serveur. Elle permet aux utilisateurs de solliciter par téléphone la maintenance pour résoudre les dysfonctionnements du poste.</li>
+                    <li class="liAssist"><span>L'assistance avec prise en mains à distance</span> aux ordinateurs de bureau est un complément de la maintenance serveur. Elle permet aux utilisateurs de solliciter par téléphone la maintenance pour résoudre les dysfonctionnements du poste.<button class="btnMooc btn"> <a class="aMooc" href="/site/#assistance">En savoir plus</a></button></li>
                 </div>
             </ul>
         </div>
     </section>
-    <section>
+    <!--Partie clients et partenaires-->
+    <section id="client">
         <hr class="hrArticle">
         <h3>Il nous ont fait confiance</h3>
         <div class="divClient">
             <div class="cardClient">
-                <h6 class="nameClient">ADAPEI88</h6>
-                <img class="imgClient" src="{{asset('images/clients/adapei88.jpg')}}" alt="adapai88">
-            </div>
-            {# <img class="imgClient" src="{{asset('images/clients/aeim54.jpg')}}" alt="aeim54"> #}
-            <div class="cardClient">
-                <h6 class="nameClient">CMSEA</h6>
-                <img class="imgClient" src="{{asset('images/clients/cmsea.jpg')}}" alt="cmsea">
+                <img class="imgClient" src="{{asset('images/clients/Logo/adapei88Logo.jpg')}}" alt="adapai88">
             </div>
             <div class="cardClient">
-                <h6 class="nameClient">ENVIE</h6>
-                <img class="imgClient" src="{{asset('images/clients/envie.jpg')}}" alt="envie">
+                <img class="imgClient" src="{{asset('images/clients/Logo/aeim54Logo.png')}}" alt="aeim54">
             </div>
             <div class="cardClient">
-                <h6 class="nameClient">IMMORAVI</h6>
-                <img class="imgClient" src="{{asset('images/clients/immoravi.jpg')}}" alt="immoravi">
+                <img class="imgClient" src="{{asset('images/clients/Logo/cmseaLogo.png')}}" alt="cmsea">
             </div>
             <div class="cardClient">
-                <h6 class="nameClient">LES PAPILLONS BLANCS</h6>
-                <img class="imgClient" src="{{asset('images/clients/pbesl.jpg')}}" alt="pbsel">
+                <img class="imgClient" src="{{asset('images/clients/Logo/envieLogo.png')}}" alt="envie">
             </div>
             <div class="cardClient">
-                <h6 class="nameClient">YSOS</h6>
-                <img class="imgClient" src="{{asset('images/clients/ysos.jpg')}}" alt="ysos">
+                <img class="imgClient" src="{{asset('images/clients/Logo/lespapillonsblancsLogo.jpg')}}" alt="pbsel">
+            </div>
+            <div class="cardClient">
+                <img class="imgClient" src="{{asset('images/clients/Logo/ysosLogo.jpg')}}" alt="ysos">
             </div>   
         </div>
     </section>
-    <!--vague du footer-->
-    <div class="inWave">
-        <img class="wave" src="{{asset('images/wave2.1.svg')}}" alt="">
-    </div>
 {% endblock body %}

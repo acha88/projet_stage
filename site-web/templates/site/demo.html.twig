@@ -1,20 +1,19 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <div class="inWave">
-        <!--vague du header, plusieurs vagues-->
-        <img class="wave" src="{{asset('images/wave1.2.svg')}}" alt="">
-    </div>
     <div class="outWave">
-        <!--premier paragraphe, pouvant servir à une présentation-->
         <h3>Demander une démonstration</h3>
+        <!--page de demande de démonstration, renvoyez sur un formulaire pour prise de rdv-->
         <hr>
-        <p>Notre prochaine session aura lieu le : </p>
-        <p>METTRE LA DATE</p>
-        <P>Si vous êtes intéressez contacter-nous via <a href="mailto:support@helpinfo.fr">MAIL</a></P>
-    </div>
-    <!--vague du footer-->
-    <div class="inWave">
-        <img class="wave" src="{{asset('images/wave2.1.svg')}}" alt="">
+        <div class="divSecurity">
+            <p>Choisissez une date qui vous convient : </p>
+            <div>
+                <input type="date" min="2022-05-02" name="demo" id="demo">
+            </div>
+            <br>
+            <p>Pour confirmer votre choix, rendez-vous à la prochaine étape 
+                <button class="btn"><a href="">Suivant</a></button>
+            </p>
+        </div>
     </div>
 {% endblock body %}

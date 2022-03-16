@@ -36,7 +36,8 @@ class SiteController extends AbstractController
             'title' => "Help Info",
             'article' => $article
         ]);
-    }
+    }  
+
     /**
     * @Route("/site/mooc", name="mooc")
     */
@@ -49,4 +50,5 @@ class SiteController extends AbstractController
     public function demo() {
         return $this->render('site/demo.html.twig');
     }
+
 }

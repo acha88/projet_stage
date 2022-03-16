@@ -1,18 +1,13 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <div class="inWave">
-        <!--vague du header, plusieurs vagues-->
-        <img class="wave" src="{{asset('images/wave1.2.svg')}}" alt="">
-    </div>
     <div class="outWave">
-        <br>
-        <!--articles des solutions en BDD-->
         <h3 id="solution">Solutions GET-MS</h3>
-        <hr>
-        <section class="articles">
+        <!--partie solution GET-MS-->
+        <!--articles des solutions en BDD-->
+        <section id="i" class="articles">
             {% for article in article %}
-                <article>
+                <article id="">
                     <div class="divRow">
                         <img class="imgArticle" src="{{ article.image }}" alt="image">
                         <div class="metadata">
@@ -25,9 +20,5 @@
                 </article>
             {% endfor %}
         </section>
-    </div>
-    <!--vague du footer-->
-    <div class="inWave">
-        <img class="wave" src="{{asset('images/wave2.1.svg')}}" alt="">
     </div>
 {% endblock body %}
